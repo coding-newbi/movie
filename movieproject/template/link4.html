@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for i in flower %}
+        <div class="col-md-3">
+            <div class="card" style="width:250 px">
+  <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap"  height="200 px">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.genre}}</p>
+    <a href="{% url 'filmapp:stylish' i.id %}" class="btn btn-primary">view</a>
+  </div>
+</div>&nbsp;
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

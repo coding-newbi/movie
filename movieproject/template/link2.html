@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>link2</title>
+</head>
+<body>
+{% for i in pot %}
+<a href="{% url 'filmapp:particular' i.id %}">{{i.name}}<br>
+{% endfor %}
+</body>
+</html>
